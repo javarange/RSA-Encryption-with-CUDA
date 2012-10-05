@@ -59,9 +59,9 @@ void printUsage()
 	"digits long and is generated in N iterations (default N = 3 is fine). "
 	"LENGTH and N must be positive decimal integers." << endl << 
 	endl << 
-	"    test" << endl << 
-	"Run preconfigured tests (development version only)." << endl << 
-	endl << 
+//	"    test" << endl <<
+//	"Run preconfigured tests (development version only)." << endl <<
+//	endl <<
 	"Exit status is 0 if OK, otherwise not 0." << endl;
 }
 
@@ -77,7 +77,7 @@ void missingArgumentError(const char *argName)
 	cout << "Missing argument: '" << argName << "'." << endl;
 	exitError();
 }
-
+/*
 void test()
 {
 	try
@@ -101,7 +101,7 @@ void test()
 		exitError("Unknown error.");
 	}
 }
-
+*/
 void genkey(unsigned long int digits, unsigned long int iterations = 0)
 {
 	try
@@ -186,8 +186,8 @@ void parseParams(int argc, char *argv[])
 		else
 			genprime(digits);
 	}
-	else if (strcmp(argv[1], "test") == 0)	//run all the tests
-		test();
+//	else if (strcmp(argv[1], "test") == 0)	//run all the tests
+//		test();
 	else
 		exitError("Unrecognized option.");
 }
